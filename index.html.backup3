@@ -6,6 +6,21 @@
     <meta name="description" content="Portfolio Bili Darnanto Susilo - Menggabungkan rekayasa teknik mesin dengan solusi IT dan IoT modern.">
     <title>Bili Darnanto Susilo | Profile & Research</title>
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+    <link rel="apple-touch-icon" href="assets/img/favicon.svg">
+    
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="Bili Darnanto Susilo | Portfolio & Research">
+    <meta property="og:description" content="Magister Teknik Mesin • Problem Solver IT, IoT & Renewable Energy">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bilidarnanto.github.io">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Bili Darnanto Susilo | Portfolio">
+    <meta name="twitter:description" content="Magister Teknik Mesin • IT, IoT & Renewable Energy Problem Solver">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -691,6 +706,8 @@
             <div class="hero-avatar">BS</div>
             
             <h1>Bili Darnanto Susilo</h1>
+            
+            <p class="motto" style="color: #94a3b8; font-style: italic; font-size: 1rem; margin-bottom: 1.2rem; letter-spacing: 0.3px; font-weight: 400; position: relative; z-index: 1;">"Bridging Physics and Code, One Solution at a Time"</p>
             
             <span class="title-badge lang-id">Magister Teknik Mesin (M.T.) · Problem Solver IT, IoT &amp; Renewable Energy</span>
             <span class="title-badge lang-en">M.Eng. Mechanical Engineering · Tech Problem Solver &amp; IoT Enthusiast</span>
