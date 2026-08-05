@@ -738,15 +738,12 @@
         <!-- ============================================================ -->
         <!-- KUALIFIKASI SOL AUSTRALIA -->
         <!-- ============================================================ -->
-        <div class="section-wrapper">
-
         <section>
             <div class="section-header">
                 <div class="icon-wrap"><i class="fa-solid fa-passport"></i></div>
                 <h2 class="lang-id">Kesesuaian Skilled Occupation List (SOL) Australia</h2>
                 <h2 class="lang-en">Australia Skilled Occupation List (SOL) Alignment</h2>
             </div>
-            <div class="section-content">
 
             <!-- Profession 1: Mechanical Engineer -->
             <div class="card">
@@ -811,24 +808,17 @@
                     <strong style="color: #f1f5f9;">Note:</strong> ANZSCO Code 233512 (Mechanical Engineer) is listed on the <em>Medium and Long-term Strategic Skills List (MLTSSL)</em> — a priority pathway for permanent residency visas (Subclass 189, 190, 491). The rare combination of <strong>Mechanical Engineering + IT + IoT</strong> provides a competitive edge for cross-disciplinary assessment by Engineers Australia.
                 </p>
             </div>
-        
-            </div>
         </section>
-
-        </div>
 
 <!-- ============================================================ -->
         <!-- PUBLIKASI & RISET ILMIAH -->
         <!-- ============================================================ -->
-        <div class="section-wrapper">
-
         <section>
             <div class="section-header">
                 <div class="icon-wrap"><i class="fa-solid fa-flask"></i></div>
                 <h2 class="lang-id">Publikasi &amp; Riset Ilmiah</h2>
                 <h2 class="lang-en">Publications &amp; Research Works</h2>
             </div>
-            <div class="section-content">
 
             <!-- Research 1: BNC Composite Films -->
             <div class="card">
@@ -909,24 +899,17 @@
                     3D CAD modeling (Autodesk Inventor) and aerodynamic performance analysis of 0.5 kW micro-scale wind turbine blades utilizing NACA 4712 airfoil profiles, optimized for low-wind speed coastal environments.
                 </p>
             </div>
-        
-            </div>
         </section>
-
-        </div>
 
         <!-- ============================================================ -->
         <!-- PENGALAMAN PROFESIONAL -->
         <!-- ============================================================ -->
-        <div class="section-wrapper">
-
         <section>
             <div class="section-header">
                 <div class="icon-wrap"><i class="fa-solid fa-briefcase"></i></div>
                 <h2 class="lang-id">Perjalanan Karier &amp; Kontribusi</h2>
                 <h2 class="lang-en">Career Journey &amp; Contributions</h2>
             </div>
-            <div class="section-content">
 
             <!-- Experience 1 -->
             <div class="card">
@@ -1076,24 +1059,17 @@
                     <li>3D CAD modeling (Autodesk Inventor) &amp; aerodynamic analysis.</li>
                 </ul>
             </div>
-        
-            </div>
         </section>
-
-        </div>
 
         <!-- ============================================================ -->
         <!-- KEAHLIAN TEKNIS -->
         <!-- ============================================================ -->
-        <div class="section-wrapper">
-
         <section>
             <div class="section-header">
                 <div class="icon-wrap"><i class="fa-solid fa-wrench"></i></div>
                 <h2 class="lang-id">Alat Kerja &amp; Keahlian</h2>
                 <h2 class="lang-en">Toolkit &amp; Expertise</h2>
             </div>
-            <div class="section-content">
             
             <div class="skills-grid">
                 <div class="skill-group">
@@ -1139,24 +1115,17 @@
                     <p style="font-size: 0.95rem; color: #cbd5e1;" class="lang-en">Official holder of <strong>Copyright Certificate (KEMENKUMHAM)</strong> No. 000331414 for developed prototype innovations.</p>
                 </div>
             </div>
-        
-            </div>
         </section>
-
-        </div>
 
         <!-- ============================================================ -->
         <!-- PENDIDIKAN -->
         <!-- ============================================================ -->
-        <div class="section-wrapper">
-
         <section>
             <div class="section-header">
                 <div class="icon-wrap"><i class="fa-solid fa-graduation-cap"></i></div>
                 <h2 class="lang-id">Latar Belakang Akademis</h2>
                 <h2 class="lang-en">Academic Background</h2>
             </div>
-            <div class="section-content">
             
             <div class="card">
                 <div class="card-header" style="margin-bottom: 0;">
@@ -1193,11 +1162,7 @@
                     </div>
                 </div>
             </div>
-        
-            </div>
         </section>
-
-        </div>
 
         <footer>
             <p>&copy; 2026 Bili Darnanto Susilo. Crafted with purpose and passion.</p>

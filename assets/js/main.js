@@ -6,6 +6,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     initLanguageToggle();
     initNavbarScroll();
+    initExpandableSections();
 });
 
 /**
@@ -62,5 +63,83 @@ function initNavbarScroll() {
                 topNav.classList.remove('scrolled');
             }
         });
+    });
+}
+
+
+/**
+ * Expandable Sections System
+ * Allows collapsing/expanding all sections
+ */
+function initExpandableSections() {
+    const sectionWrappers = document.querySelectorAll('.section-wrapper');
+    if (sectionWrappers.length === 0) return;
+
+    // Buat tombol global
+    const firstSection = document.querySelector('.section-wrapper');
+    const globalToggleDiv = document.createElement('div');
+    globalToggleDiv.className = 'global-toggle-wrapper';
+    globalToggleDiv.innerHTML = `
+        <button class="btn-toggle-all" id="expandAllBtn" title="Expand All Sections">
+            <i class="fa-solid fa-chevron-down"></i> <span class="lang-id">Buka Semua</span><span class="lang-en">Expand All</span>
+        </button>
+        <button class="btn-toggle-all" id="collapseAllBtn" title="Collapse All Sections">
+            <i class="fa-solid fa-chevron-up"></i> <span class="lang-id">Tutup Semua</span><span class="lang-en">Collapse All</span>
+        </button>
+    `;
+    firstSection.parentNode.insertBefore(globalToggleDiv, firstSection);
+
+    // Setup setiap section
+    sectionWrappers.forEach((wrapper, index) => {
+        const header = wrapper.querySelector('.section-header');
+        const content = wrapper.querySelector('.section-content');
+        
+        if (!header || !content) return;
+
+        // Bungkus header agar clickable
+        const headerWrapper = document.createElement('div');
+        headerWrapper.className = 'section-header-clickable';
+        header.parentNode.insertBefore(headerWrapper, header);
+        headerWrapper.appendChild(header);
+
+        // Tambahkan toggle indicator
+        const indicator = document.createElement('span');
+        indicator.className = 'toggle-indicator';
+        indicator.innerHTML = '<i class="fa-solid fa-chevron-down"></i>';
+        header.appendChild(indicator);
+
+        // Default: semua terbuka, kecuali section terakhir bisa ditutup
+        const isOpen = true;
+        if (!isOpen) {
+            content.classList.add('collapsed');
+            indicator.classList.add('collapsed');
+        }
+
+        // Click handler
+        headerWrapper.addEventListener('click', () => {
+            const isCollapsed = content.classList.contains('collapsed');
+            
+            if (isCollapsed) {
+                // Expand
+                content.classList.remove('collapsed');
+                indicator.classList.remove('collapsed');
+            } else {
+                // Collapse
+                content.classList.add('collapsed');
+                indicator.classList.add('collapsed');
+            }
+        });
+    });
+
+    // Tombol Expand All
+    document.getElementById('expandAllBtn').addEventListener('click', () => {
+        document.querySelectorAll('.section-content').forEach(c => c.classList.remove('collapsed'));
+        document.querySelectorAll('.toggle-indicator').forEach(i => i.classList.remove('collapsed'));
+    });
+
+    // Tombol Collapse All
+    document.getElementById('collapseAllBtn').addEventListener('click', () => {
+        document.querySelectorAll('.section-content').forEach(c => c.classList.add('collapsed'));
+        document.querySelectorAll('.toggle-indicator').forEach(i => i.classList.add('collapsed'));
     });
 }
