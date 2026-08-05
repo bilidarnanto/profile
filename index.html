@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio Bili Darnanto Susilo - Menggabungkan rekayasa teknik mesin dengan solusi IT dan IoT modern.">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio Bili Darnanto Susilo - Menggabungkan rekayasa teknik mesin dengan solusi IT dan IoT modern." />
     <title>Bili Darnanto Susilo | Profile</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
     <style>
+        /* ===== RESET & VARIABEL ===== */
         :root {
             --bg-body: #090e17;
             --bg-card: #121927;
@@ -24,7 +25,11 @@
             --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
@@ -35,7 +40,7 @@
             overflow-x: hidden;
         }
 
-        /* --- SISTEM MULTI-BAHASA --- */
+        /* ===== SISTEM MULTI-BAHASA ===== */
         html[lang="id"] .lang-en { display: none !important; }
         html[lang="en"] .lang-id { display: none !important; }
 
@@ -66,8 +71,8 @@
             border-color: var(--accent-primary);
             background: rgba(59, 130, 246, 0.1);
         }
-        /* --------------------------- */
 
+        /* ===== LAYOUT ===== */
         .app-container {
             max-width: 1000px;
             margin: 0 auto;
@@ -77,13 +82,18 @@
 
         .bg-glow {
             position: fixed;
-            top: -20%; left: -10%;
-            width: 50vw; height: 50vw;
-            background: radial-gradient(circle, var(--accent-glow) 0%, rgba(0,0,0,0) 70%);
-            border-radius: 50%; z-index: -1;
-            filter: blur(80px); pointer-events: none;
+            top: -20%;
+            left: -10%;
+            width: 50vw;
+            height: 50vw;
+            background: radial-gradient(circle, var(--accent-glow) 0%, rgba(0, 0, 0, 0) 70%);
+            border-radius: 50%;
+            z-index: -1;
+            filter: blur(80px);
+            pointer-events: none;
         }
 
+        /* ===== HERO ===== */
         .hero {
             display: flex;
             flex-direction: column;
@@ -103,370 +113,623 @@
 
         .hero h1 {
             color: var(--text-heading);
-            font-size: 2.8rem; font-weight: 700;
-            letter-spacing: -1px; margin-bottom: 0.5rem;
+            font-size: 2.8rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin-bottom: 0.5rem;
         }
 
         .hero .title-badge {
             display: inline-block;
             background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-            font-size: 1.2rem; font-weight: 600;
-            margin-bottom: 1.5rem; font-family: 'JetBrains Mono', monospace;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            font-family: 'JetBrains Mono', monospace;
         }
 
         .hero p.summary {
-            max-width: 800px; font-size: 1.05rem; margin-bottom: 2rem;
+            max-width: 800px;
+            font-size: 1.05rem;
+            margin-bottom: 2rem;
         }
 
-        .contact-actions { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+        .contact-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
 
+        .contact-actions .btn {
+            padding: 0.75rem 1.8rem;
+        }
+
+        /* ===== BUTTON ===== */
         .btn {
-            display: inline-flex; align-items: center; gap: 0.6rem;
-            padding: 0.75rem 1.5rem; border-radius: 12px;
-            font-weight: 600; font-size: 0.95rem; text-decoration: none;
-            transition: var(--transition-smooth); border: 1px solid transparent;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: var(--transition-smooth);
+            border: 1px solid transparent;
         }
 
-        .btn-primary { background-color: var(--text-heading); color: var(--bg-body); }
-        .btn-primary:hover { background-color: var(--accent-primary); color: white; box-shadow: 0 4px 15px var(--accent-glow); transform: translateY(-2px); }
-        .btn-outline { background-color: rgba(255, 255, 255, 0.03); color: var(--text-heading); border-color: var(--border-subtle); }
-        .btn-outline:hover { background-color: rgba(255, 255, 255, 0.08); border-color: var(--text-main); transform: translateY(-2px); }
+        .btn-primary {
+            background-color: var(--text-heading);
+            color: var(--bg-body);
+        }
+        .btn-primary:hover {
+            background-color: var(--accent-primary);
+            color: white;
+            box-shadow: 0 4px 15px var(--accent-glow);
+            transform: translateY(-2px);
+        }
 
+        .btn-outline {
+            background-color: rgba(255, 255, 255, 0.03);
+            color: var(--text-heading);
+            border-color: var(--border-subtle);
+        }
+        .btn-outline:hover {
+            background-color: rgba(255, 255, 255, 0.08);
+            border-color: var(--text-main);
+            transform: translateY(-2px);
+        }
+
+        /* ===== SECTION ===== */
         section {
-            margin-bottom: 4rem; animation: fadeInUp 1s ease-out forwards;
-            opacity: 0; transform: translateY(20px);
+            margin-bottom: 4rem;
+            animation: fadeInUp 1s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
         }
         section:nth-of-type(1) { animation-delay: 0.2s; }
         section:nth-of-type(2) { animation-delay: 0.4s; }
         section:nth-of-type(3) { animation-delay: 0.6s; }
 
-        .section-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; }
-        .section-header i { font-size: 1.5rem; color: var(--accent-primary); background: rgba(59, 130, 246, 0.1); padding: 0.8rem; border-radius: 12px; }
-        .section-header h2 { font-size: 1.6rem; color: var(--text-heading); font-weight: 700; }
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .section-header i {
+            font-size: 1.5rem;
+            color: var(--accent-primary);
+            background: rgba(59, 130, 246, 0.1);
+            padding: 0.8rem;
+            border-radius: 12px;
+        }
+        .section-header h2 {
+            font-size: 1.6rem;
+            color: var(--text-heading);
+            font-weight: 700;
+        }
 
+        /* ===== CARD ===== */
         .card {
-            background: var(--bg-card); border: 1px solid var(--border-subtle);
-            border-radius: 16px; padding: 2rem; margin-bottom: 1.5rem;
-            transition: var(--transition-smooth); position: relative; overflow: hidden;
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            transition: var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
         }
         .card::before {
-            content: ''; position: absolute; left: 0; top: 0; height: 100%; width: 4px;
-            background: var(--accent-primary); transform: scaleY(0); transition: transform 0.3s ease; transform-origin: top;
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: var(--accent-primary);
+            transform: scaleY(0);
+            transition: transform 0.3s ease;
+            transform-origin: top;
         }
-        .card:hover { border-color: #3e4c66; box-shadow: 0 8px 24px rgba(0,0,0,0.4); transform: translateY(-3px); }
-        .card:hover::before { transform: scaleY(1); }
+        .card:hover {
+            border-color: #3e4c66;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+            transform: translateY(-3px);
+        }
+        .card:hover::before {
+            transform: scaleY(1);
+        }
 
-        .card-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; margin-bottom: 1rem; gap: 1rem; }
-        .role-title { color: var(--text-heading); font-size: 1.25rem; font-weight: 700; }
-        .company { display: block; color: var(--accent-secondary); font-weight: 600; font-size: 1rem; margin-top: 0.2rem; }
-        
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+            gap: 1rem;
+        }
+        .role-title {
+            color: var(--text-heading);
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+        .company {
+            display: block;
+            color: var(--accent-secondary);
+            font-weight: 600;
+            font-size: 1rem;
+            margin-top: 0.2rem;
+        }
+
         .date-badge {
-            background: rgba(255, 255, 255, 0.05); color: var(--text-main);
-            padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.85rem;
-            font-weight: 500; font-family: 'JetBrains Mono', monospace; border: 1px solid var(--border-subtle);
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-main);
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            font-family: 'JetBrains Mono', monospace;
+            border: 1px solid var(--border-subtle);
+            white-space: nowrap;
         }
 
-        ul.task-list { list-style: none; padding-left: 0; }
-        ul.task-list li { position: relative; padding-left: 1.5rem; margin-bottom: 0.8rem; }
-        ul.task-list li::before { content: '▹'; position: absolute; left: 0; color: var(--accent-primary); font-weight: bold; }
+        ul.task-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        ul.task-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+        ul.task-list li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--accent-primary);
+            font-weight: bold;
+        }
 
-        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
-        .skill-group { background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 16px; padding: 1.5rem; }
-        .skill-group h3 { color: var(--text-heading); font-size: 1.1rem; margin-bottom: 1rem; font-weight: 600; }
-        .skill-tags { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+        /* ===== SKILLS ===== */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-group {
+            background: var(--bg-card);
+            border: 1px solid var(--border-subtle);
+            border-radius: 16px;
+            padding: 1.5rem;
+        }
+        .skill-group h3 {
+            color: var(--text-heading);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+        }
+
         .tag {
-            background: rgba(59, 130, 246, 0.1); color: #bfdbfe;
-            border: 1px solid rgba(59, 130, 246, 0.2); padding: 0.4rem 0.8rem;
-            border-radius: 8px; font-size: 0.85rem; font-weight: 500;
-            font-family: 'JetBrains Mono', monospace; transition: var(--transition-smooth);
+            background: rgba(59, 130, 246, 0.1);
+            color: #bfdbfe;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            padding: 0.4rem 0.8rem;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            font-family: 'JetBrains Mono', monospace;
+            transition: var(--transition-smooth);
         }
-        .tag:hover { background: rgba(59, 130, 246, 0.2); border-color: rgba(59, 130, 246, 0.4); transform: translateY(-2px); }
+        .tag:hover {
+            background: rgba(59, 130, 246, 0.2);
+            border-color: rgba(59, 130, 246, 0.4);
+            transform: translateY(-2px);
+        }
 
-        footer { text-align: center; padding: 3rem 0; border-top: 1px solid var(--border-subtle); margin-top: 2rem; font-size: 0.9rem; }
+        /* ===== FOOTER ===== */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            border-top: 1px solid var(--border-subtle);
+            margin-top: 2rem;
+            font-size: 0.9rem;
+        }
 
-        @keyframes fadeInDown { from { opacity: 0; transform: translateY(-30px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+        /* ===== ANIMASI ===== */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
 
+        /* ===== RESPONSIVE ===== */
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.2rem; }
             .card-header { flex-direction: column; }
             .date-badge { align-self: flex-start; }
             .hero { padding: 4.5rem 1.5rem 3rem; }
             .lang-toggle-wrapper { top: 1rem; right: 1rem; }
+            .contact-actions .btn { width: 100%; justify-content: center; }
         }
     </style>
 </head>
 <body>
 
-<div class="bg-glow"></div>
+    <div class="bg-glow"></div>
 
-<!-- Tombol Ganti Bahasa -->
-<div class="lang-toggle-wrapper">
-    <button class="lang-btn" id="langToggle" title="Ganti Bahasa / Switch Language">
-        <i class="fa-solid fa-globe"></i> <span id="langLabel">ID</span>
-    </button>
-</div>
+    <!-- ===== TOMBOL GANTI BAHASA ===== -->
+    <div class="lang-toggle-wrapper">
+        <button class="lang-btn" id="langToggle" title="Ganti Bahasa / Switch Language">
+            <i class="fa-solid fa-globe"></i> <span id="langLabel">ID</span>
+        </button>
+    </div>
 
-<div class="app-container">
+    <div class="app-container">
 
-    <!-- HERO SECTION -->
-    <header class="hero">
-        <h1>Bili Darnanto Susilo</h1>
-        
-        <!-- Role Badges -->
-        <span class="title-badge lang-id">Magister Teknik Mesin (M.T.) | Problem Solver di Bidang IT & Sistem IoT</span>
-        <span class="title-badge lang-en">M.Eng. Mechanical Engineering | Tech Problem Solver & IoT Enthusiast</span>
-        
-        <!-- Summary ID (Lebih hangat, menunjukkan passion & value) -->
-        <p class="summary lang-id">
-            Seorang profesional yang antusias memadukan inovasi teknik mesin dengan teknologi informasi modern. Saya berdedikasi untuk menciptakan solusi yang tidak hanya canggih secara teknis—seperti sistem IoT, energi terbarukan, dan stabilitas jaringan server—tetapi juga memberikan <strong>dampak nyata bagi kelancaran dan efisiensi operasional perusahaan</strong>. Saya sangat menikmati proses belajar berkelanjutan, kolaborasi bersama tim, dan mengubah tantangan teknis menjadi solusi praktis.
-        </p>
-        
-        <!-- Summary EN -->
-        <p class="summary lang-en">
-            A passionate professional dedicated to bridging mechanical engineering principles with modern information technology. I focus on creating solutions that are not only technically robust—spanning IoT systems, renewable energy, and enterprise network stability—but also deliver <strong>tangible impacts on company efficiency and operations</strong>. I thrive in collaborative environments, embrace continuous learning, and enjoy turning complex technical challenges into practical solutions.
-        </p>
-        
-        <div class="contact-actions">
-            <a href="mailto:bilidarnanto@hotmail.com" class="btn btn-primary">
-                <i class="fa-solid fa-envelope"></i> 
-                <span class="lang-id">Sapa Saya via Email</span><span class="lang-en">Say Hello via Email</span>
-            </a>
-            <a href="https://wa.me/6285334398681" target="_blank" class="btn btn-outline">
-                <i class="fa-brands fa-whatsapp"></i> WhatsApp
-            </a>
-            <a href="#" class="btn btn-outline" style="pointer-events: none;">
-                <i class="fa-solid fa-location-dot"></i> Pasuruan, ID
-            </a>
-        </div>
-    </header>
+        <!-- ============================================================ -->
+        <!-- HERO SECTION -->
+        <!-- ============================================================ -->
+        <header class="hero">
+            <h1>Bili Darnanto Susilo</h1>
 
-    <!-- PENGALAMAN PROFESIONAL -->
-    <section>
-        <div class="section-header">
-            <i class="fa-solid fa-network-wired"></i>
-            <h2 class="lang-id">Perjalanan Karier & Kontribusi</h2>
-            <h2 class="lang-en">Career Journey & Contributions</h2>
-        </div>
+            <span class="title-badge lang-id">Magister Teknik Mesin (M.T.) | Problem Solver di Bidang IT &amp; Sistem IoT</span>
+            <span class="title-badge lang-en">M.Eng. Mechanical Engineering | Tech Problem Solver &amp; IoT Enthusiast</span>
 
-        <!-- Experience 1 -->
-        <div class="card">
-            <div class="card-header">
-                <div>
-                    <h3 class="role-title">IT Networking and Support</h3>
-                    <span class="company">PT Best Profit Futures</span>
-                </div>
-                <span class="date-badge">
-                    <span class="lang-id">Agustus 2022 – Saat Ini</span>
-                    <span class="lang-en">Aug 2022 – Present</span>
-                </span>
+            <p class="summary lang-id">
+                Seorang profesional yang antusias memadukan inovasi teknik mesin dengan teknologi informasi modern.
+                Saya berdedikasi untuk menciptakan solusi yang tidak hanya canggih secara teknis—seperti sistem IoT,
+                energi terbarukan, dan stabilitas jaringan server—tetapi juga memberikan
+                <strong>dampak nyata bagi kelancaran dan efisiensi operasional perusahaan</strong>.
+                Saya sangat menikmati proses belajar berkelanjutan, kolaborasi bersama tim, dan mengubah tantangan teknis
+                menjadi solusi praktis.
+            </p>
+
+            <p class="summary lang-en">
+                A passionate professional dedicated to bridging mechanical engineering principles with modern
+                information technology. I focus on creating solutions that are not only technically robust—spanning
+                IoT systems, renewable energy, and enterprise network stability—but also deliver
+                <strong>tangible impacts on company efficiency and operations</strong>.
+                I thrive in collaborative environments, embrace continuous learning, and enjoy turning complex
+                technical challenges into practical solutions.
+            </p>
+
+            <div class="contact-actions">
+                <a href="mailto:bilidarnanto@hotmail.com" class="btn btn-primary">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span class="lang-id">Sapa Saya via Email</span>
+                    <span class="lang-en">Say Hello via Email</span>
+                </a>
+                <a href="https://wa.me/6285334398681" target="_blank" class="btn btn-outline">
+                    <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                </a>
+                <a href="#" class="btn btn-outline" style="pointer-events: none;">
+                    <i class="fa-solid fa-location-dot"></i> Pasuruan, ID
+                </a>
             </div>
-            <!-- Tasks ID (Menonjolkan tanggung jawab & dampak) -->
-            <ul class="task-list lang-id">
-                <li>Dipercaya penuh untuk menjaga denyut nadi operasional perusahaan dengan memastikan infrastruktur jaringan Gigabit berjalan stabil 24/7 tanpa *downtime*.</li>
-                <li>Berinisiatif membangun kolaborasi antar-tim yang lebih aman dan terpusat melalui instalasi dan pengelolaan Server Nextcloud internal perusahaan.</li>
-                <li>Mempercepat alur kerja harian dengan mengembangkan dan melakukan *upgrade* pada aplikasi ERP perusahaan, termasuk fitur cetak struk otomatis dan integrasi pembayaran non-tunai.</li>
-                <li>Merancang solusi inovatif lintas-disiplin, seperti integrasi jaringan satelit Starlink dan sistem manajemen baterai LiFePO4 untuk menunjang kelancaran operasional armada bank keliling.</li>
-                <li>Mengelola keandalan server Linux (Ubuntu/Debian) menggunakan ekosistem Docker dan optimalisasi Nginx agar sistem selalu responsif.</li>
-            </ul>
-            <!-- Tasks EN -->
-            <ul class="task-list lang-en">
-                <li>Entrusted with maintaining the company's operational backbone by ensuring a stable, zero-downtime Gigabit network infrastructure 24/7.</li>
-                <li>Initiated and built a more secure, centralized team collaboration environment by deploying and managing an internal Nextcloud Server.</li>
-                <li>Streamlined daily workflows by upgrading the company's ERP applications, integrating non-cash payments, and automating receipt printing features.</li>
-                <li>Designed innovative, cross-disciplinary tech solutions, such as integrating Starlink connectivity and LiFePO4 battery monitoring to support mobile banking fleets.</li>
-                <li>Ensured robust server performance by administering Linux (Ubuntu/Debian) environments utilizing Nginx and Docker containers.</li>
-            </ul>
-        </div>
+        </header>
 
-        <!-- Experience 2 -->
-        <div class="card">
-            <div class="card-header">
-                <div>
-                    <h3 class="role-title">Production Engineering Technician</h3>
-                    <span class="company">CV Clawing Kreative</span>
-                </div>
-                <span class="date-badge">
-                    <span class="lang-id">Januari 2022 – Saat Ini</span>
-                    <span class="lang-en">Jan 2022 – Present</span>
-                </span>
-            </div>
-            <ul class="task-list lang-id">
-                <li>Menuangkan kreativitas dan ketelitian dalam merancang arsitektur kelistrikan tingkat tinggi khusus untuk modifikasi kendaraan *campervan*.</li>
-                <li>Secara konsisten menganalisis dan memperbaiki alur produksi untuk memangkas waktu kerja dan biaya operasional, namun tetap menjaga standar kualitas unggul demi kepuasan pelanggan.</li>
-            </ul>
-            <ul class="task-list lang-en">
-                <li>Poured creativity and precision into designing and manufacturing high-efficiency, custom electrical architectures for specialized campervan conversions.</li>
-                <li>Consistently analyzed and optimized production processes to reduce operational costs and lead times, all while maintaining strict quality standards to ensure customer satisfaction.</li>
-            </ul>
-        </div>
-
-        <!-- Experience 3 -->
-        <div class="card">
-            <div class="card-header">
-                <div>
-                    <h3 class="role-title">Asisten Peneliti & Laboratorium</h3>
-                    <span class="company">Universitas Negeri Malang</span>
-                </div>
-                <span class="date-badge">
-                    <span class="lang-id">Agustus 2020 – Des 2021</span>
-                    <span class="lang-en">Aug 2020 – Dec 2021</span>
-                </span>
-            </div>
-            <ul class="task-list lang-id">
-                <li>Berkontribusi pada inovasi energi ramah lingkungan melalui riset mendalam pada Nanoselulosa Bakteri (BNC) berbahan dasar limbah nanas sebagai kandidat anoda baterai masa depan.</li>
-                <li>Bekerja sama secara erat dengan akademisi senior dalam merumuskan proposal, menganalisis data fabrikasi material, dan mendokumentasikannya menjadi artikel untuk publikasi jurnal internasional.</li>
-            </ul>
-            <ul class="task-list lang-en">
-                <li>Contributed to green energy innovations through advanced research on Bacterial Nanocellulose (BNC) derived from pineapple waste as future battery anode candidates.</li>
-                <li>Collaborated closely with senior academics to formulate research proposals, analyze material fabrication data, and draft comprehensive articles for international scientific publications.</li>
-            </ul>
-        </div>
-        
-        <!-- Experience 4 -->
-        <div class="card">
-            <div class="card-header">
-                <div>
-                    <h3 class="role-title">Praktisi Pengabdian Masyarakat (IoT)</h3>
-                    <span class="company">Universitas Negeri Malang</span>
-                </div>
-                <span class="date-badge">
-                    <span class="lang-id">Okt 2020 – Sep 2021</span>
-                    <span class="lang-en">Oct 2020 – Sep 2021</span>
-                </span>
-            </div>
-            <ul class="task-list lang-id">
-                <li>Memberikan dampak langsung kepada kemandirian energi masyarakat rural dengan merancang bangun sistem Pembangkit Listrik Tenaga Surya (PLTS) *off-grid* berkapasitas 1 kW.</li>
-                <li>Menghubungkan teknologi dan kelestarian alam melalui perakitan perangkat keras dan lunak IoT untuk mengotomatisasi mesin *microbubble generator* bertenaga surya dari jarak jauh.</li>
-            </ul>
-            <ul class="task-list lang-en">
-                <li>Delivered a direct impact on rural energy independence by designing, building, and evaluating a 1 kW off-grid Photovoltaic (PV) system.</li>
-                <li>Bridged technology and environmental sustainability by assembling IoT hardware and software to remotely automate solar-powered microbubble generators.</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- KEAHLIAN TEKNIS -->
-    <section>
-        <div class="section-header">
-            <i class="fa-solid fa-microchip"></i>
-            <h2 class="lang-id">Alat Kerja & Keahlian Saya</h2>
-            <h2 class="lang-en">My Toolkit & Expertise</h2>
-        </div>
-        
-        <div class="skills-grid">
-            <div class="skill-group">
-                <h3><i class="fa-brands fa-linux" style="margin-right: 0.5rem;"></i> IT & Software</h3>
-                <div class="skill-tags">
-                    <span class="tag">Linux (Debian/Ubuntu)</span>
-                    <span class="tag">Docker</span>
-                    <span class="tag">Nginx</span>
-                    <span class="tag">Gigabit Networking</span>
-                    <span class="tag">PHP</span>
-                    <span class="tag">HTML</span>
-                    <span class="tag">C</span>
-                    <span class="tag">Sistem ERP</span>
-                </div>
+        <!-- ============================================================ -->
+        <!-- PENGALAMAN PROFESIONAL -->
+        <!-- ============================================================ -->
+        <section>
+            <div class="section-header">
+                <i class="fa-solid fa-network-wired"></i>
+                <h2 class="lang-id">Perjalanan Karier &amp; Kontribusi</h2>
+                <h2 class="lang-en">Career Journey &amp; Contributions</h2>
             </div>
 
-            <div class="skill-group">
-                <h3><i class="fa-solid fa-bolt" style="margin-right: 0.5rem;"></i> Engineering</h3>
-                <div class="skill-tags">
-                    <span class="tag">Pengembangan IoT</span>
-                    <span class="tag">Desain Sistem PLTS</span>
-                    <span class="tag">Manajemen Daya LiFePO4</span>
-                    <span class="tag">Autodesk Inventor</span>
-                    <span class="tag">Sintesis Nanokomposit</span>
-                    <span class="tag">Energi Angin & Terbarukan</span>
+            <!-- Experience 1: PT Best Profit Futures -->
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <h3 class="role-title">IT Networking and Support</h3>
+                        <span class="company">PT Best Profit Futures</span>
+                    </div>
+                    <span class="date-badge">
+                        <span class="lang-id">Agustus 2022 – Saat Ini</span>
+                        <span class="lang-en">Aug 2022 – Present</span>
+                    </span>
+                </div>
+
+                <ul class="task-list lang-id">
+                    <li>Dipercaya penuh untuk menjaga denyut nadi operasional perusahaan dengan memastikan infrastruktur jaringan Gigabit berjalan stabil 24/7 tanpa <em>downtime</em>.</li>
+                    <li>Berinisiatif membangun kolaborasi antar-tim yang lebih aman dan terpusat melalui instalasi dan pengelolaan Server Nextcloud internal perusahaan.</li>
+                    <li>Mempercepat alur kerja harian dengan mengembangkan dan melakukan <em>upgrade</em> pada aplikasi ERP perusahaan, termasuk fitur cetak struk otomatis dan integrasi pembayaran non-tunai.</li>
+                    <li>Merancang solusi inovatif lintas-disiplin, seperti integrasi jaringan satelit Starlink dan sistem manajemen baterai LiFePO4 untuk menunjang kelancaran operasional armada bank keliling.</li>
+                    <li>Mengelola keandalan server Linux (Ubuntu/Debian) menggunakan ekosistem Docker dan optimalisasi Nginx agar sistem selalu responsif.</li>
+                </ul>
+
+                <ul class="task-list lang-en">
+                    <li>Entrusted with maintaining the company's operational backbone by ensuring a stable, zero-downtime Gigabit network infrastructure 24/7.</li>
+                    <li>Initiated and built a more secure, centralized team collaboration environment by deploying and managing an internal Nextcloud Server.</li>
+                    <li>Streamlined daily workflows by upgrading the company's ERP applications, integrating non-cash payments, and automating receipt printing features.</li>
+                    <li>Designed innovative, cross-disciplinary tech solutions, such as integrating Starlink connectivity and LiFePO4 battery monitoring to support mobile banking fleets.</li>
+                    <li>Ensured robust server performance by administering Linux (Ubuntu/Debian) environments utilizing Nginx and Docker containers.</li>
+                </ul>
+            </div>
+
+            <!-- Experience 2: CV Clawing Kreative -->
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <h3 class="role-title">Production Engineering Technician</h3>
+                        <span class="company">CV Clawing Kreative</span>
+                    </div>
+                    <span class="date-badge">
+                        <span class="lang-id">Januari 2022 – Saat Ini</span>
+                        <span class="lang-en">Jan 2022 – Present</span>
+                    </span>
+                </div>
+
+                <ul class="task-list lang-id">
+                    <li>Menuangkan kreativitas dan ketelitian dalam merancang arsitektur kelistrikan tingkat tinggi khusus untuk modifikasi kendaraan <em>campervan</em>.</li>
+                    <li>Secara konsisten menganalisis dan memperbaiki alur produksi untuk memangkas waktu kerja dan biaya operasional, namun tetap menjaga standar kualitas unggul demi kepuasan pelanggan.</li>
+                </ul>
+
+                <ul class="task-list lang-en">
+                    <li>Poured creativity and precision into designing and manufacturing high-efficiency, custom electrical architectures for specialized campervan conversions.</li>
+                    <li>Consistently analyzed and optimized production processes to reduce operational costs and lead times, all while maintaining strict quality standards to ensure customer satisfaction.</li>
+                </ul>
+            </div>
+
+            <!-- Experience 3: Asisten Peneliti UM -->
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <h3 class="role-title">Asisten Peneliti &amp; Laboratorium</h3>
+                        <span class="company">Universitas Negeri Malang</span>
+                    </div>
+                    <span class="date-badge">
+                        <span class="lang-id">Agustus 2020 – Des 2021</span>
+                        <span class="lang-en">Aug 2020 – Dec 2021</span>
+                    </span>
+                </div>
+
+                <ul class="task-list lang-id">
+                    <li>Berkontribusi pada inovasi energi ramah lingkungan melalui riset mendalam pada Nanoselulosa Bakteri (BNC) berbahan dasar limbah nanas sebagai kandidat anoda baterai masa depan.</li>
+                    <li>Bekerja sama secara erat dengan akademisi senior dalam merumuskan proposal, menganalisis data fabrikasi material, dan mendokumentasikannya menjadi artikel untuk publikasi jurnal internasional.</li>
+                    <li>Bertanggung jawab atas perawatan peralatan laboratorium dan pelaporan keselamatan kerja di Lab Material Lanjut.</li>
+                </ul>
+
+                <ul class="task-list lang-en">
+                    <li>Contributed to green energy innovations through advanced research on Bacterial Nanocellulose (BNC) derived from pineapple waste as future battery anode candidates.</li>
+                    <li>Collaborated closely with senior academics to formulate research proposals, analyze material fabrication data, and draft comprehensive articles for international scientific publications.</li>
+                    <li>Managed laboratory equipment maintenance and safety reporting for the Advanced Materials Lab.</li>
+                </ul>
+            </div>
+
+            <!-- Experience 4: Pengabdian Masyarakat IoT -->
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <h3 class="role-title">Praktisi Pengabdian Masyarakat (IoT)</h3>
+                        <span class="company">Universitas Negeri Malang</span>
+                    </div>
+                    <span class="date-badge">
+                        <span class="lang-id">Okt 2020 – Sep 2021</span>
+                        <span class="lang-en">Oct 2020 – Sep 2021</span>
+                    </span>
+                </div>
+
+                <ul class="task-list lang-id">
+                    <li>Memberikan dampak langsung kepada kemandirian energi masyarakat rural dengan merancang bangun sistem Pembangkit Listrik Tenaga Surya (PLTS) <em>off-grid</em> berkapasitas 1 kW.</li>
+                    <li>Menghubungkan teknologi dan kelestarian alam melalui perakitan perangkat keras dan lunak IoT untuk mengotomatisasi mesin <em>microbubble generator</em> bertenaga surya dari jarak jauh.</li>
+                    <li>Menetapkan protokol pemantauan jarak jauh untuk memastikan stabilitas sistem IoT di lokasi pengabdian.</li>
+                </ul>
+
+                <ul class="task-list lang-en">
+                    <li>Delivered a direct impact on rural energy independence by designing, building, and evaluating a 1 kW off-grid Photovoltaic (PV) system.</li>
+                    <li>Bridged technology and environmental sustainability by assembling IoT hardware and software to remotely automate solar-powered microbubble generators.</li>
+                    <li>Established remote monitoring protocols to ensure the stability of IoT systems in rural deployments.</li>
+                </ul>
+            </div>
+
+            <!-- ===== TAMBAHAN: Pengalaman Sebelumnya (PT Sumber Kopi Prima & PT Lentera Bumi Nusantara) ===== -->
+            <div style="margin-top: 1.5rem;">
+                <div style="display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1.2rem;">
+                    <i class="fa-solid fa-clock-rotate-left" style="color: var(--accent-secondary); font-size: 1.2rem;"></i>
+                    <h3 style="color: var(--text-heading); font-size: 1.1rem; font-weight: 600;" class="lang-id">Pengalaman Awal Karier</h3>
+                    <h3 style="color: var(--text-heading); font-size: 1.1rem; font-weight: 600;" class="lang-en">Early Career Experience</h3>
+                </div>
+
+                <div class="card" style="margin-bottom: 1rem;">
+                    <div class="card-header">
+                        <div>
+                            <h3 class="role-title">Production Operator</h3>
+                            <span class="company">PT Sumber Kopi Prima</span>
+                        </div>
+                        <span class="date-badge">
+                            <span class="lang-id">Maret 2020 – Agustus 2020</span>
+                            <span class="lang-en">Mar 2020 – Aug 2020</span>
+                        </span>
+                    </div>
+                    <ul class="task-list lang-id">
+                        <li>Mengoperasikan mesin roasting industri kapasitas 500 kg/batch dengan menjaga profil kualitas yang ketat.</li>
+                        <li>Melakukan perawatan preventif dan <em>troubleshooting</em> pada komponen termal dan mekanik mesin roasting.</li>
+                    </ul>
+                    <ul class="task-list lang-en">
+                        <li>Operated industrial roasting machinery for 500 kg/batch coffee production, maintaining strict quality profiles.</li>
+                        <li>Performed preventive maintenance and troubleshooting on thermal and mechanical roasting components.</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div>
+                            <h3 class="role-title">Internship (Wind Energy)</h3>
+                            <span class="company">PT Lentera Bumi Nusantara</span>
+                        </div>
+                        <span class="date-badge">
+                            <span class="lang-id">Magang S1</span>
+                            <span class="lang-en">Bachelor Internship</span>
+                        </span>
+                    </div>
+                    <ul class="task-list lang-id">
+                        <li>Mendesain bilah turbin angin skala mikro menggunakan profil airfoil NACA 4712 untuk optimasi pada kecepatan angin rendah.</li>
+                        <li>Melakukan pemodelan CAD 3D (Autodesk Inventor) dan analisis performa aerodinamika.</li>
+                    </ul>
+                    <ul class="task-list lang-en">
+                        <li>Designed micro-scale wind turbine blades using NACA 4712 airfoil profiles for low-wind speed optimization.</li>
+                        <li>Performed 3D CAD modeling (Autodesk Inventor) and aerodynamic performance analysis.</li>
+                    </ul>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="card" style="margin-top: 1.5rem; padding: 1.5rem;">
-            <div style="display: flex; align-items: center; gap: 1rem;">
-                <i class="fa-solid fa-certificate" style="font-size: 2rem; color: #f59e0b;"></i>
-                <div>
-                    <h4 style="color: var(--text-heading); margin-bottom: 0.2rem;" class="lang-id">Lisensi & Hak Kekayaan Intelektual</h4>
-                    <h4 style="color: var(--text-heading); margin-bottom: 0.2rem;" class="lang-en">Intellectual Property & Licenses</h4>
-                    
-                    <p style="font-size: 0.95rem;" class="lang-id">Dipercaya memegang <strong>Surat Pencatatan Ciptaan (KEMENKUMHAM)</strong> No. 000331414 atas inovasi prototipe yang dikembangkan.</p>
-                    <p style="font-size: 0.95rem;" class="lang-en">Proud holder of <strong>Copyright Certificate (KEMENKUMHAM)</strong> No. 000331414 for developed prototype innovations.</p>
-                </div>
+        <!-- ============================================================ -->
+        <!-- KEAHLIAN TEKNIS -->
+        <!-- ============================================================ -->
+        <section>
+            <div class="section-header">
+                <i class="fa-solid fa-microchip"></i>
+                <h2 class="lang-id">Alat Kerja &amp; Keahlian Saya</h2>
+                <h2 class="lang-en">My Toolkit &amp; Expertise</h2>
             </div>
-        </div>
-    </section>
 
-    <!-- PENDIDIKAN -->
-    <section>
-        <div class="section-header">
-            <i class="fa-solid fa-graduation-cap"></i>
-            <h2 class="lang-id">Latar Belakang Akademis</h2>
-            <h2 class="lang-en">Academic Background</h2>
-        </div>
-        
-        <div class="card">
-            <div class="card-header" style="margin-bottom: 0;">
-                <div>
-                    <h3 class="role-title lang-id">Magister Teknik Mesin</h3>
-                    <h3 class="role-title lang-en">Master of Mechanical Engineering</h3>
-                    <span class="company lang-id">Universitas Negeri Malang</span>
-                    <span class="company lang-en">State University of Malang</span>
+            <div class="skills-grid">
+                <div class="skill-group">
+                    <h3><i class="fa-brands fa-linux" style="margin-right: 0.5rem;"></i> IT &amp; Software</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Linux (Debian/Ubuntu)</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">Nginx</span>
+                        <span class="tag">Gigabit Networking</span>
+                        <span class="tag">PHP</span>
+                        <span class="tag">HTML</span>
+                        <span class="tag">C</span>
+                        <span class="tag">Sistem ERP</span>
+                        <span class="tag">Nextcloud</span>
+                        <span class="tag">Network Support</span>
+                    </div>
                 </div>
-                <div style="text-align: right;">
-                    <span class="date-badge" style="display: inline-block; margin-bottom: 0.5rem;">Lulus 2021</span>
-                    <div style="color: var(--text-heading); font-weight: 700;">
-                        <span class="lang-id">IPK: 3.60 / 4.00</span>
-                        <span class="lang-en">GPA: 3.60 / 4.00</span>
+
+                <div class="skill-group">
+                    <h3><i class="fa-solid fa-bolt" style="margin-right: 0.5rem;"></i> Engineering</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Pengembangan IoT</span>
+                        <span class="tag">Desain Sistem PLTS</span>
+                        <span class="tag">Manajemen Daya LiFePO4</span>
+                        <span class="tag">Autodesk Inventor</span>
+                        <span class="tag">Sintesis Nanokomposit</span>
+                        <span class="tag">Energi Angin &amp; Terbarukan</span>
+                        <span class="tag">Konversi Energi</span>
+                        <span class="tag">Aerodinamika</span>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="card">
-            <div class="card-header" style="margin-bottom: 0;">
-                <div>
-                    <h3 class="role-title lang-id">Sarjana Teknik Mesin</h3>
-                    <h3 class="role-title lang-en">Bachelor of Mechanical Engineering</h3>
-                    <span class="company lang-id">Universitas Jember</span>
-                    <span class="company lang-en">University of Jember</span>
-                </div>
-                <div style="text-align: right;">
-                    <span class="date-badge" style="display: inline-block; margin-bottom: 0.5rem;">Lulus 2019</span>
-                    <div style="color: var(--text-heading); font-weight: 700;">
-                        <span class="lang-id">IPK: 3.55 / 4.00</span>
-                        <span class="lang-en">GPA: 3.55 / 4.00</span>
+            <!-- Sertifikat -->
+            <div class="card" style="margin-top: 1.5rem; padding: 1.5rem;">
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <i class="fa-solid fa-certificate" style="font-size: 2rem; color: #f59e0b;"></i>
+                    <div>
+                        <h4 style="color: var(--text-heading); margin-bottom: 0.2rem;" class="lang-id">Lisensi &amp; Hak Kekayaan Intelektual</h4>
+                        <h4 style="color: var(--text-heading); margin-bottom: 0.2rem;" class="lang-en">Intellectual Property &amp; Licenses</h4>
+
+                        <p style="font-size: 0.95rem;" class="lang-id">
+                            Dipercaya memegang <strong>Surat Pencatatan Ciptaan (KEMENKUMHAM)</strong> No. 000331414
+                            atas inovasi prototipe yang dikembangkan.
+                        </p>
+                        <p style="font-size: 0.95rem;" class="lang-en">
+                            Proud holder of <strong>Copyright Certificate (KEMENKUMHAM)</strong> No. 000331414
+                            for developed prototype innovations.
+                        </p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer>
-        <p>&copy; 2026 Bili Darnanto Susilo. Crafted with purpose and passion.</p>
-    </footer>
+        <!-- ============================================================ -->
+        <!-- PENDIDIKAN -->
+        <!-- ============================================================ -->
+        <section>
+            <div class="section-header">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <h2 class="lang-id">Latar Belakang Akademis</h2>
+                <h2 class="lang-en">Academic Background</h2>
+            </div>
 
-</div>
+            <div class="card">
+                <div class="card-header" style="margin-bottom: 0;">
+                    <div>
+                        <h3 class="role-title lang-id">Magister Teknik Mesin</h3>
+                        <h3 class="role-title lang-en">Master of Mechanical Engineering</h3>
+                        <span class="company lang-id">Universitas Negeri Malang</span>
+                        <span class="company lang-en">State University of Malang</span>
+                    </div>
+                    <div style="text-align: right;">
+                        <span class="date-badge" style="display: inline-block; margin-bottom: 0.5rem;">Lulus 2021</span>
+                        <div style="color: var(--text-heading); font-weight: 700;">
+                            <span class="lang-id">IPK: 3.60 / 4.00</span>
+                            <span class="lang-en">GPA: 3.60 / 4.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const htmlElement = document.documentElement;
-        const toggleBtn = document.getElementById('langToggle');
-        const langLabel = document.getElementById('langLabel');
+            <div class="card">
+                <div class="card-header" style="margin-bottom: 0;">
+                    <div>
+                        <h3 class="role-title lang-id">Sarjana Teknik Mesin</h3>
+                        <h3 class="role-title lang-en">Bachelor of Mechanical Engineering</h3>
+                        <span class="company lang-id">Universitas Jember</span>
+                        <span class="company lang-en">University of Jember</span>
+                    </div>
+                    <div style="text-align: right;">
+                        <span class="date-badge" style="display: inline-block; margin-bottom: 0.5rem;">Lulus 2019</span>
+                        <div style="color: var(--text-heading); font-weight: 700;">
+                            <span class="lang-id">IPK: 3.55 / 4.00</span>
+                            <span class="lang-en">GPA: 3.55 / 4.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        const userLang = navigator.language || navigator.userLanguage;
-        let currentLang = userLang.toLowerCase().includes('id') ? 'id' : 'en';
-        
-        htmlElement.setAttribute('lang', currentLang);
-        langLabel.textContent = currentLang.toUpperCase();
+        <!-- ============================================================ -->
+        <!-- FOOTER -->
+        <!-- ============================================================ -->
+        <footer>
+            <p>&copy; 2026 Bili Darnanto Susilo. Crafted with purpose and passion.</p>
+        </footer>
 
-        toggleBtn.addEventListener('click', () => {
-            currentLang = currentLang === 'id' ? 'en' : 'id';
+    </div>
+
+    <!-- ===== SCRIPT SWITCH BAHASA ===== -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const htmlElement = document.documentElement;
+            const toggleBtn = document.getElementById('langToggle');
+            const langLabel = document.getElementById('langLabel');
+
+            // Deteksi bahasa browser
+            const userLang = navigator.language || navigator.userLanguage;
+            let currentLang = userLang.toLowerCase().includes('id') ? 'id' : 'en';
+
             htmlElement.setAttribute('lang', currentLang);
             langLabel.textContent = currentLang.toUpperCase();
+
+            toggleBtn.addEventListener('click', () => {
+                currentLang = currentLang === 'id' ? 'en' : 'id';
+                htmlElement.setAttribute('lang', currentLang);
+                langLabel.textContent = currentLang.toUpperCase();
+            });
         });
-    });
-</script>
+    </script>
 
 </body>
 </html>
