@@ -1,0 +1,57 @@
+[
+    {
+        "id": "bnc-composite",
+        "title": {
+            "id": "Sintesis & Karakterisasi Film Komposit BNC untuk Kandidat Anoda Baterai Lithium-Ion",
+            "en": "Synthesis & Characterization of BNC Composite Films for Lithium-Ion Battery Anode Candidates"
+        },
+        "institution": "Journal of Mechanical Engineering Science and Technology · Universitas Negeri Malang",
+        "date": "2020 – 2021",
+        "role": { "id": "Peneliti Utama", "en": "Lead Researcher" },
+        "status": "published",
+        "statusText": { "id": "Terbit", "en": "Published" },
+        "description": {
+            "id": "Penelitian eksperimental sintesis <em>Bacterial Nanocellulose</em> (BNC) dari limbah cair nanas yang diperkuat dengan <em>Graphite Nanoplatelets</em>. Riset ini berfokus pada pengembangan material anoda baterai Lithium-Ion performa tinggi yang ramah lingkungan dan berkelanjutan.",
+            "en": "Experimental research on synthesizing Bacterial Nanocellulose (BNC) from pineapple waste reinforced with Graphite Nanoplatelets. Focused on developing eco-friendly and high-performance Lithium-ion battery anode candidates."
+        },
+        "links": [
+            { "icon": "fa-arrow-up-right-from-square", "text": { "id": "Google Scholar", "en": "Google Scholar" }, "url": "https://scholar.google.com" }
+        ]
+    },
+    {
+        "id": "solar-mbg",
+        "title": {
+            "id": "SolarMBG: Sistem Pemantau & Pengendali Mesin Microbubble Generator Berbasis IoT",
+            "en": "SolarMBG: IoT-Based Monitoring & Control System for Microbubble Generator"
+        },
+        "institution": "Hak Cipta KEMENKUMHAM RI (No. 000331414)",
+        "date": "2021",
+        "role": { "id": "Pengembang/Pencipta", "en": "Creator/Developer" },
+        "status": "registered",
+        "statusText": { "id": "Tercatat", "en": "Registered" },
+        "description": {
+            "id": "Pengembangan perangkat keras dan lunak kontroler IoT terintegrasi dengan Pembangkit Listrik Tenaga Surya (PLTS) Off-Grid 1 kW untuk pengoperasian dan pemantauan jarak jauh mesin <em>microbubble generator</em> secara otomatis.",
+            "en": "Development of integrated IoT controller hardware and software combined with a 1 kW Off-Grid Photovoltaic system for remote monitoring and automated operation of microbubble generators."
+        },
+        "links": [
+            { "icon": "fa-shield-halved", "text": { "id": "Verifikasi Hak Cipta", "en": "Verify Copyright" }, "url": "https://e-hakcipta.dgip.go.id/index.php?c=code" }
+        ]
+    },
+    {
+        "id": "wind-turbine",
+        "title": {
+            "id": "Desain & Analisis Aerodinamika Bilah Turbin Angin Skala Mikro NACA 4712",
+            "en": "Design & Aerodynamic Analysis of Micro-Scale Wind Turbine Blades Using NACA 4712"
+        },
+        "institution": "Fakultas Teknik · Universitas Jember",
+        "date": "2018 – 2019",
+        "role": { "id": "Peneliti Utama (Skripsi)", "en": "Lead Researcher (Thesis)" },
+        "status": "completed",
+        "statusText": { "id": "Selesai", "en": "Completed" },
+        "description": {
+            "id": "Perancangan 3D CAD (Autodesk Inventor) dan analisis performa aerodinamika bilah turbin angin skala mikro (0.5 kW) menggunakan profil airfoil NACA 4712 yang dioptimalkan untuk kondisi kecepatan angin rendah di daerah pesisir.",
+            "en": "3D CAD modeling (Autodesk Inventor) and aerodynamic performance analysis of 0.5 kW micro-scale wind turbine blades utilizing NACA 4712 airfoil profiles, optimized for low-wind speed coastal environments."
+        },
+        "links": []
+    }
+]

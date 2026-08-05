@@ -1,0 +1,76 @@
+[
+    {
+        "id": "best-profit",
+        "title": { "id": "IT Networking and Support", "en": "IT Networking and Support" },
+        "company": "PT Best Profit Futures",
+        "date": { "id": "Ags 2022 – Saat Ini", "en": "Aug 2022 – Present" },
+        "tasks": {
+            "id": [
+                "Menjaga infrastruktur jaringan Gigabit 24/7 tanpa <em>downtime</em>.",
+                "Membangun dan mengelola Server Nextcloud internal untuk kolaborasi tim yang aman.",
+                "Mengembangkan dan meng-<em>upgrade</em> aplikasi ERP (cetak struk otomatis, integrasi pembayaran non-tunai).",
+                "Mengintegrasikan Starlink & manajemen baterai LiFePO4 untuk armada bank keliling.",
+                "Mengelola server Linux (Ubuntu/Debian) dengan Docker & Nginx."
+            ],
+            "en": [
+                "Maintained stable, zero-downtime Gigabit network infrastructure 24/7.",
+                "Deployed internal Nextcloud Server for secure team collaboration.",
+                "Upgraded ERP applications with automated receipts & non-cash payment integration.",
+                "Integrated Starlink & LiFePO4 battery management for mobile banking fleets.",
+                "Administered Linux servers (Ubuntu/Debian) with Docker & Nginx."
+            ]
+        }
+    },
+    {
+        "id": "clawing-kreative",
+        "title": { "id": "Production Engineering Technician", "en": "Production Engineering Technician" },
+        "company": "CV Clawing Kreative",
+        "date": { "id": "Jan 2022 – Saat Ini", "en": "Jan 2022 – Present" },
+        "tasks": {
+            "id": [
+                "Merancang arsitektur kelistrikan khusus untuk konversi kendaraan <em>campervan</em>.",
+                "Mengoptimalkan alur produksi untuk efisiensi biaya dan waktu."
+            ],
+            "en": [
+                "Designed custom electrical architectures for campervan conversions.",
+                "Optimized production workflows for cost and time efficiency."
+            ]
+        }
+    },
+    {
+        "id": "um-research",
+        "title": { "id": "Asisten Peneliti & Laboratorium", "en": "Research & Lab Assistant" },
+        "company": "Universitas Negeri Malang",
+        "date": { "id": "Ags 2020 – Des 2021", "en": "Aug 2020 – Dec 2021" },
+        "tasks": {
+            "id": [
+                "Riset Nanoselulosa Bakteri (BNC) dari limbah nanas untuk anoda baterai.",
+                "Menyusun proposal riset, analisis data, dan artikel publikasi internasional.",
+                "Perawatan peralatan dan pelaporan K3 Lab Material Lanjut."
+            ],
+            "en": [
+                "Researched BNC from pineapple waste for battery anodes.",
+                "Drafted proposals, analyzed data, and authored international publications.",
+                "Maintained lab equipment and safety reporting."
+            ]
+        }
+    },
+    {
+        "id": "um-iot",
+        "title": { "id": "Praktisi Pengabdian Masyarakat (IoT)", "en": "Community Service Practitioner (IoT)" },
+        "company": "Universitas Negeri Malang",
+        "date": { "id": "Okt 2020 – Sep 2021", "en": "Oct 2020 – Sep 2021" },
+        "tasks": {
+            "id": [
+                "Merancang sistem PLTS <em>off-grid</em> 1 kW untuk masyarakat rural.",
+                "Merakit hardware & software IoT untuk automasi <em>microbubble generator</em> bertenaga surya.",
+                "Menyusun protokol pemantauan jarak jauh."
+            ],
+            "en": [
+                "Designed 1 kW off-grid PV system for rural communities.",
+                "Assembled IoT hardware & software for solar-powered microbubble automation.",
+                "Established remote monitoring protocols."
+            ]
+        }
+    }
+]

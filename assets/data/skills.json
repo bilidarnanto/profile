@@ -1,0 +1,19 @@
+{
+    "it": {
+        "title": { "id": "IT & Software", "en": "IT & Software" },
+        "icon": "fa-server",
+        "tags": [
+            "Linux (Debian/Ubuntu)", "Docker", "Nginx", "Gigabit Networking",
+            "PHP", "HTML", "C", "Sistem ERP", "Nextcloud", "Network Support"
+        ]
+    },
+    "engineering": {
+        "title": { "id": "Engineering", "en": "Engineering" },
+        "icon": "fa-bolt",
+        "tags": [
+            "Pengembangan IoT", "Desain Sistem PLTS", "Manajemen Daya LiFePO4",
+            "Autodesk Inventor", "Sintesis Nanokomposit", "Energi Angin & Terbarukan",
+            "Konversi Energi", "Aerodinamika"
+        ]
+    }
+}
