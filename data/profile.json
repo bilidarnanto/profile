@@ -1,0 +1,16 @@
+{
+  "id": {
+    "hero": {
+      "name": "Bili Darnanto Susilo",
+      "title": "Magister Teknik Mesin (M.T.) · Problem Solver IT, IoT & Renewable Energy",
+      "summary": "Seorang profesional yang antusias memadukan inovasi teknik mesin dengan teknologi informasi modern."
+    }
+  },
+  "en": {
+    "hero": {
+      "name": "Bili Darnanto Susilo",
+      "title": "M.Eng. Mechanical Engineering · Tech Problem Solver & IoT Enthusiast",
+      "summary": "A passionate professional dedicated to bridging mechanical engineering with modern IT."
+    }
+  }
+}
