@@ -143,3 +143,21 @@ function initExpandableSections() {
         document.querySelectorAll('.toggle-indicator').forEach(i => i.classList.add('collapsed'));
     });
 }
+
+
+/**
+ * External Link Tracking
+ * Logs clicks on ResearchGate, Google Scholar, etc.
+ */
+function initExternalLinkTracking() {
+    document.querySelectorAll('a[target="_blank"]').forEach(link => {
+        link.addEventListener('click', function(e) {
+            const url = this.getAttribute('href');
+            if (url && url.includes('researchgate.net')) {
+                console.log('📊 ResearchGate visit tracked');
+            } else if (url && url.includes('scholar.google.com')) {
+                console.log('📊 Google Scholar visit tracked');
+            }
+        });
+    });
+}
