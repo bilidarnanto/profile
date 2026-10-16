@@ -1,3 +1,5 @@
 User-agent: *
 Allow: /
-Sitemap: https://bilidarnanto.github.io/sitemap.xml
+Disallow: /404.html
+
+Sitemap: https://bilidarnanto.github.io/profile/sitemap.xml

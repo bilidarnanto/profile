@@ -81,10 +81,10 @@ function initExpandableSections() {
     globalToggleDiv.className = 'global-toggle-wrapper';
     globalToggleDiv.innerHTML = `
         <button class="btn-toggle-all" id="expandAllBtn" title="Expand All Sections">
-            <i class="fa-solid fa-chevron-down"></i> <span class="lang-id">Buka Semua</span><span class="lang-en">Expand All</span>
+            <i class="fa-solid fa-chevron-down"></i> <span lang="id" class="lang-id">Buka Semua</span><span lang="en" class="lang-en">Expand All</span>
         </button>
         <button class="btn-toggle-all" id="collapseAllBtn" title="Collapse All Sections">
-            <i class="fa-solid fa-chevron-up"></i> <span class="lang-id">Tutup Semua</span><span class="lang-en">Collapse All</span>
+            <i class="fa-solid fa-chevron-up"></i> <span lang="id" class="lang-id">Tutup Semua</span><span lang="en" class="lang-en">Collapse All</span>
         </button>
     `;
     firstSection.parentNode.insertBefore(globalToggleDiv, firstSection);
