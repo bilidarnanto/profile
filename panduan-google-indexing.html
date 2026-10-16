@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0a0f1a">
+    <meta name="robots" content="noindex, follow">
+    <title>Panduan: Tahapan Agar Profil Terindex Google | Bili Darnanto Susilo</title>
+    <meta name="description" content="Langkah-langkah teknis agar halaman profil dan riset terindeks Google: Search Console, submit sitemap, request indexing, dan backlink.">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .guide-hero { padding: 2.5rem 2rem; margin: 1.5rem 0 2.5rem; text-align: center; }
+        .guide-hero h1 { font-size: 2rem; margin-bottom: 0.6rem; }
+        .guide-hero p { color: var(--text-main); margin: 0.4rem 0; }
+        .step-no {
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 26px; height: 26px; border-radius: 50%; margin-right: 0.5rem;
+            background: rgba(59, 130, 246, 0.15); border: 1px solid rgba(59, 130, 246, 0.35);
+            color: #93c5fd; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; flex-shrink: 0;
+        }
+        .cmd {
+            display: block; background: #0d1526; border: 1px solid var(--border-subtle);
+            border-radius: 10px; padding: 0.7rem 0.9rem; margin: 0.7rem 0;
+            font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: #93c5fd;
+            overflow-x: auto; word-break: break-all;
+        }
+        .guide-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+        .guide-table th, .guide-table td { padding: 0.7rem 0.9rem; text-align: left; border-bottom: 1px solid var(--border-subtle); }
+        .guide-table th { color: var(--text-heading); font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.5px; }
+        .guide-table td { color: #cbd5e1; }
+        .checklist { list-style: none; }
+        .checklist li { position: relative; padding-left: 1.7rem; margin-bottom: 0.55rem; color: #cbd5e1; font-size: 0.95rem; }
+        .checklist li::before {
+            content: '\f00c'; font-family: 'Font Awesome 6 Free'; font-weight: 900;
+            position: absolute; left: 0; top: 0.1rem; color: var(--accent-green); font-size: 0.8rem;
+        }
+        .checklist.todo li::before { content: '\f10c'; color: var(--accent-amber); }
+        .back-link { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--text-muted); text-decoration: none; font-size: 0.85rem; font-family: 'JetBrains Mono', monospace; }
+        .back-link:hover { color: var(--accent-primary); }
+    </style>
+</head>
+<body>
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+
+    <div class="app-container">
+        <p style="margin-top: 1rem;"><a class="back-link" href="/profile/"><i class="fa-solid fa-arrow-left"></i> Kembali ke profil</a></p>
+
+        <!-- HERO -->
+        <header class="hero guide-hero">
+            <span class="title-badge">Panduan Internal &middot; Tidak diindeks</span>
+            <h1>Panduan: Tahapan Agar Profil Terindex Google</h1>
+            <p>Teknis di sisi repo sudah beres. Sisa langkah di bawah ini butuh akun Google pemilik situs.</p>
+            <code class="cmd" style="display: inline-block; margin-top: 1rem;">https://bilidarnanto.github.io/profile/</code>
+        </header>
+
+        <!-- SUDAH BERES -->
+        <div class="section-wrapper">
+            <section>
+                <div class="section-header">
+                    <div class="icon-wrap"><i class="fa-solid fa-circle-check"></i></div>
+                    <h2>Yang sudah diselesaikan di repo</h2>
+                </div>
+                <div class="section-content">
+                    <ul class="checklist">
+                        <li><strong>robots.txt</strong> menunjuk sitemap ke alamat benar (<code>/profile/sitemap.xml</code>) &mdash; sebelumnya ke alamat domain induk yang 404, inilah sebab utama halaman tidak pernah ditemukan Google.</li>
+                        <li><strong>sitemap.xml</strong> mencantumkan URL kanonik yang sebenarnya plus tanggal <code>lastmod</code>.</li>
+                        <li><strong>Canonical tag</strong> di halaman utama mencegah Google bingung antara <code>/profile/</code> dan <code>/profile/index.html</code>.</li>
+                        <li><strong>Structured data (JSON-LD)</strong>: Person, ProfilePage, dan daftar publikasi &mdash; bahan untuk knowledge panel saat nama dicari.</li>
+                        <li><strong>Judul &amp; deskripsi</strong> memuat kata kunci nyata: Mechanical Engineer, ANZSCO 233512, IoT, energi terbarukan, BNC/GNP, NACA 4712.</li>
+                        <li><strong>Open Graph + Twitter Card</strong> dan gambar preview 1200&times;630 agar rapi saat link dibagikan (ini juga memancing orang menautkan halaman).</li>
+                        <li><strong>Menu anchor &amp; id per bagian</strong> (#sol, #research, #experience, #skills, #education) sehingga struktur halaman terbaca crawler.</li>
+                        <li><strong>Atribut bahasa</strong> pada 158 elemen bilingual, dan halaman 404 diberi <code>noindex</code>.</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <!-- LANGKAH -->
+        <div class="section-wrapper">
+            <section>
+                <div class="section-header">
+                    <div class="icon-wrap"><i class="fa-solid fa-list-check"></i></div>
+                    <h2>Langkah yang perlu Anda jalankan</h2>
+                </div>
+                <div class="section-content">
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div>
+                                <h3 class="role-title"><span class="step-no">1</span> Verifikasi kepemilikan di Google Search Console</h3>
+                                <span class="company">Sekali saja &middot; &plusmn;5 menit</span>
+                            </div>
+                            <span class="date-badge">Wajib</span>
+                        </div>
+                        <ul class="task-list">
+                            <li>Buka <a href="https://search.google.com/search-console" target="_blank" rel="noopener">search.google.com/search-console</a> &rarr; <strong>Add property</strong>.</li>
+                            <li>Pilih jenis <strong>URL prefix</strong> (bukan Domain, karena Domain butuh akses DNS), lalu isi: <code>https://bilidarnanto.github.io/profile/</code></li>
+                            <li>Pilih metode verifikasi <strong>HTML tag</strong>, copy kode <code>&lt;meta name="google-site-verification" ...&gt;</code> yang muncul.</li>
+                            <li>Tempel kode itu di <strong>index.html</strong>, tepat di baris komentar <code>&lt;!-- Verification: ... --&gt;</code> di dalam <code>&lt;head&gt;</code>, lalu commit &amp; push.</li>
+                            <li>Tunggu 1&ndash;2 menit agar GitHub Pages selesai build, lalu klik <strong>Verify</strong>.</li>
+                        </ul>
+                        <p style="font-size: 0.9rem; color: var(--text-muted);">Kirim kode verifikasinya ke saya bila ingin saya pasang langsung &mdash; penanda tempatnya sudah saya siapkan.</p>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div>
+                                <h3 class="role-title"><span class="step-no">2</span> Submit sitemap</h3>
+                                <span class="company">Setelah properti terverifikasi</span>
+                            </div>
+                            <span class="date-badge">Kunci</span>
+                        </div>
+                        <ul class="task-list">
+                            <li>Menu <strong>Sitemaps</strong> &rarr; isi kolom dengan <code>sitemap.xml</code> (cukup nama filenya) &rarr; <strong>Submit</strong>.</li>
+                            <li>Status harus <strong>Success</strong> dengan <em>Discovered URLs: 1</em>. Kalau <em>Couldn't fetch</em>, cek dulu alamat <code>https://bilidarnanto.github.io/profile/sitemap.xml</code> di browser (saat ini statusnya sudah normal).</li>
+                            <li>Ini memberi tahu Google alamat halaman secara eksplisit &mdash; tanpa ini halaman baru di subfolder sulit ditemukan.</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div>
+                                <h3 class="role-title"><span class="step-no">3</span> Minta indexing halaman utama</h3>
+                                <span class="company">Setelah sitemap tersubmit</span>
+                            </div>
+                            <span class="date-badge">&plusmn;1 menit</span>
+                        </div>
+                        <ul class="task-list">
+                            <li>Menu <strong>URL Inspection</strong> &rarr; tempel <code>https://bilidarnanto.github.io/profile/</code> &rarr; Enter.</li>
+                            <li>Klik <strong>Request indexing</strong>. Status awal biasanya <em>URL is on Google</em> belum muncul, itu wajar.</li>
+                            <li>Lakukan sekali saja. Mengulang berkali-kali tidak mempercepat, hanya membuang kuota harian.</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div>
+                                <h3 class="role-title"><span class="step-no">4</span> Bangun backlink (faktor terbesar setelah submit)</h3>
+                                <span class="company">Dikerjakan bertahap</span>
+                            </div>
+                            <span class="date-badge">Prioritas</span>
+                        </div>
+                        <ul class="task-list">
+                            <li>Buat repo <code>bilidarnanto/bilidarnanto</code> (nama harus sama persis dengan username) berisi <code>README.md</code> dengan link ke profil. Repo ini tampil di halaman GitHub Anda dan sering dikunjungi crawler.</li>
+                            <li>Pasang link yang sama di bio <strong>ResearchGate</strong>, <strong>LinkedIn</strong>, <strong>Google Scholar</strong>, dan tanda tangan email/WhatsApp.</li>
+                            <li>Satu backlink dari profil yang memang relevan lebih bernilai daripada banyak tautan acak.</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div>
+                                <h3 class="role-title"><span class="step-no">5</span> Tambah halaman agar ada lebih banyak pintu masuk</h3>
+                                <span class="company">Opsional tapi berdampak</span>
+                            </div>
+                            <span class="date-badge">Jangka panjang</span>
+                        </div>
+                        <ul class="task-list">
+                            <li>Satu URL memang bisa terindeks, tetapi pecah isi menjadi halaman terpisah (mis. riset BNC/GNP, turbin angin NACA 4712, SolarMBG IoT) membuat lebih banyak kata kunci punya halaman sendiri.</li>
+                            <li>Setiap halaman baru: judul unik, <code>&lt;link rel="canonical"&gt;</code> sendiri, dan tambahkan <code>&lt;url&gt;</code> baru di <strong>sitemap.xml</strong> lengkap dengan <code>&lt;lastmod&gt;</code>.</li>
+                            <li>Perbarui konten berkala &mdash; Google memprioritaskan halaman yang diperbarui.</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div>
+                                <h3 class="role-title"><span class="step-no">6</span> Pantau status indexing</h3>
+                                <span class="company">Cek 1&ndash;2 minggu sekali</span>
+                            </div>
+                            <span class="date-badge">Rutin</span>
+                        </div>
+                        <ul class="task-list">
+                            <li>Search Console &rarr; <strong>Indexing &rsaquo; Pages</strong>: lihat apakah URL berstatus <em>Indexed</em>.</li>
+                            <li>Search Console &rarr; <strong>Performance</strong>: mulai terlihat query yang memunculkan halaman.</li>
+                            <li>Cek manual di Google: ketik <code>site:bilidarnanto.github.io/profile</code></li>
+                            <li>Perkiraan waktu: 3 hari sampai 4 minggu. Jika lewat 6 minggu belum muncul, buka laporan <strong>Pages</strong> untuk membaca alasan persisnya (<em>Crawled &ndash; currently not indexed</em> atau <em>Discovered &ndash; currently not indexed</em>) dan kirimkan ke saya.</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div>
+                                <h3 class="role-title"><span class="step-no">7</span> Opsional: Bing &amp; mesin pencari lain</h3>
+                                <span class="company">Tambahan &middot; &plusmn;3 menit</span>
+                            </div>
+                            <span class="date-badge">Opsional</span>
+                        </div>
+                        <ul class="task-list">
+                            <li>Buka <a href="https://www.bing.com/webmasters" target="_blank" rel="noopener">Bing Webmaster Tools</a> &rarr; pilih <strong>Import from Google Search Console</strong> agar tidak perlu verifikasi ulang.</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+        <!-- EXPECTATION -->
+        <div class="section-wrapper">
+            <section>
+                <div class="section-header">
+                    <div class="icon-wrap"><i class="fa-solid fa-clock"></i></div>
+                    <h2>Ekspektasi waktu &amp; hal yang justru merugikan</h2>
+                </div>
+                <div class="section-content">
+                    <div class="card" style="padding: 0.5rem 1rem;">
+                        <table class="guide-table">
+                            <thead>
+                                <tr><th>Tahap</th><th>Perkiraan hasil</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Setelah submit sitemap</td><td>Google mulai meng-crawl dalam hitungan jam&ndash;2 hari</td></tr>
+                                <tr><td>Setelah Request indexing</td><td>Antrean crawl, biasanya 1&ndash;7 hari</td></tr>
+                                <tr><td>Muncul di hasil pencarian</td><td>Umumnya 1&ndash;4 minggu setelah crawl</td></tr>
+                                <tr><td>Muncul untuk pencarian nama lengkap</td><td>Lebih cepat, terutama setelah backlink dari profil resmi</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="card" style="border-color: rgba(245, 158, 11, 0.25);">
+                        <div class="card-header" style="margin-bottom: 0.8rem;">
+                            <div>
+                                <h3 class="role-title">Hindari</h3>
+                                <span class="company">Justru bisa menurunkan kepercayaan Google</span>
+                            </div>
+                        </div>
+                        <ul class="task-list">
+                            <li>Membeli backlink atau menukar tautan massal.</li>
+                            <li>Menekan <em>Request indexing</em> berulang kali setiap hari.</li>
+                            <li>Menduplikasi isi halaman di beberapa URL tanpa canonical.</li>
+                            <li>Menumpuk kata kunci di deskripsi atau judul.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- CHECKLIST -->
+        <div class="section-wrapper">
+            <section>
+                <div class="section-header">
+                    <div class="icon-wrap"><i class="fa-solid fa-square-check"></i></div>
+                    <h2>Checklist cepat</h2>
+                </div>
+                <div class="section-content">
+                    <div class="card">
+                        <ul class="checklist todo">
+                            <li>Property <code>/profile/</code> terverifikasi di Search Console</li>
+                            <li><code>sitemap.xml</code> tersubmit dengan status Success</li>
+                            <li>Halaman utama sudah di-<em>Request indexing</em></li>
+                            <li>Repo <code>bilidarnanto/bilidarnanto</code> berisi link ke profil</li>
+                            <li>Link dipasang di ResearchGate / LinkedIn / email</li>
+                            <li>Dicek berkala lewat <code>site:bilidarnanto.github.io/profile</code></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Bili Darnanto Susilo. Panduan internal &mdash; halaman ini sengaja tidak diindeks.</p>
+        </footer>
+    </div>
+</body>
+</html>
