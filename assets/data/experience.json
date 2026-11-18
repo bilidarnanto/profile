@@ -1,23 +1,27 @@
 [
     {
         "id": "best-profit",
-        "title": { "id": "IT Networking and Support", "en": "IT Networking and Support" },
+        "title": { "id": "IT Support, Networking & Infrastruktur", "en": "IT Support, Networking & Infrastructure" },
         "company": "PT Best Profit Futures",
         "date": { "id": "Ags 2022 – Saat Ini", "en": "Aug 2022 – Present" },
         "tasks": {
             "id": [
+                "Monitoring & maintenance perangkat: PC, LAN, FTP Server, NAS Server, printer, UPS, dan CCTV.",
+                "Troubleshooting OS (Windows & Linux), Server AD, dan software manajemen bisnis internal.",
                 "Menjaga infrastruktur jaringan Gigabit 24/7 tanpa <em>downtime</em>.",
-                "Membangun dan mengelola Server Nextcloud internal untuk kolaborasi tim yang aman.",
+                "Mengembangkan <strong>Fuel & Fleet Management System</strong> untuk pemantauan konsumsi BBM dan operasional armada.",
                 "Mengembangkan dan meng-<em>upgrade</em> aplikasi ERP (cetak struk otomatis, integrasi pembayaran non-tunai).",
-                "Mengintegrasikan Starlink & manajemen baterai LiFePO4 untuk armada bank keliling.",
-                "Mengelola server Linux (Ubuntu/Debian) dengan Docker & Nginx."
+                "Membangun & mengelola Server Nextcloud serta server Linux (Ubuntu/Debian) dengan Docker & Nginx.",
+                "Mengintegrasikan Starlink & manajemen baterai LiFePO4 untuk armada bank keliling."
             ],
             "en": [
-                "Maintained stable, zero-downtime Gigabit network infrastructure 24/7.",
-                "Deployed internal Nextcloud Server for secure team collaboration.",
-                "Upgraded ERP applications with automated receipts & non-cash payment integration.",
-                "Integrated Starlink & LiFePO4 battery management for mobile banking fleets.",
-                "Administered Linux servers (Ubuntu/Debian) with Docker & Nginx."
+                "Monitored & maintained PCs, LAN, FTP servers, NAS servers, printers, UPS units, and CCTV.",
+                "Troubleshot Windows & Linux OS, Active Directory server, and internal business management software.",
+                "Maintained stable, zero-downtime 24/7 Gigabit network infrastructure.",
+                "Developed a <strong>Fuel & Fleet Management System</strong> to track fuel consumption and fleet operations.",
+                "Upgraded ERP applications with automated receipts & cashless payment integration.",
+                "Deployed internal Nextcloud and administered Linux servers (Ubuntu/Debian) with Docker & Nginx.",
+                "Integrated Starlink & LiFePO4 battery management for mobile banking fleets."
             ]
         }
     },

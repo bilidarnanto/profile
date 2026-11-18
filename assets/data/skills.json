@@ -1,10 +1,19 @@
 {
     "it": {
-        "title": { "id": "IT & Software", "en": "IT & Software" },
-        "icon": "fa-server",
+        "title": { "id": "IT Support & Infrastruktur", "en": "IT Support & Infrastructure" },
+        "icon": "fa-headset",
         "tags": [
-            "Linux (Debian/Ubuntu)", "Docker", "Nginx", "Gigabit Networking",
-            "PHP", "HTML", "C", "Sistem ERP", "Nextcloud", "Network Support"
+            "Windows OS", "Windows Server (AD)", "Linux (Debian/Ubuntu)", "LAN & TCP/IP",
+            "PC & Printer Support", "FTP Server", "NAS Server", "UPS & CCTV",
+            "Docker", "Nginx", "Nextcloud", "Hardware Troubleshooting", "PHP", "HTML", "C"
+        ]
+    },
+    "data": {
+        "title": { "id": "Data & Produktivitas", "en": "Data & Productivity" },
+        "icon": "fa-chart-line",
+        "tags": [
+            "Microsoft Office (Excel/Pivot)", "Python", "Analisis Data",
+            "Pelaporan & Dokumentasi", "Sistem ERP", "SQL & WMS (upskilling)"
         ]
     },
     "engineering": {
